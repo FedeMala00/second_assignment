@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
 import rospy
 from geometry_msgs.msg import Point, Pose, Twist
@@ -7,7 +7,7 @@ from nav_msgs.msg import Odometry
 import math
 import actionlib
 import actionlib.msg
-import assignment_2_2023.msg
+import second_assignment.msg
 from tf import transformations
 from std_srvs.srv import *
 import time
@@ -100,8 +100,8 @@ def planning(goal):
     rospy.set_param('des_pos_y', desired_position_.y)
     
     
-    feedback = assignment_2_2023.msg.PlanningFeedback()
-    result = assignment_2_2023.msg.PlanningResult()
+    feedback = second_assignment.msg.PlanningFeedback()
+    result = second_assignment.msg.PlanningResult()
     
     while not rospy.is_shutdown():
         err_pos = math.sqrt(pow(desired_position_.y - position_.y, 2) +
@@ -174,7 +174,7 @@ def main():
         '/go_to_point_switch', SetBool)
     srv_client_wall_follower_ = rospy.ServiceProxy(
         '/wall_follower_switch', SetBool)
-    act_s = actionlib.SimpleActionServer('/reaching_goal', assignment_2_2023.msg.PlanningAction, planning, auto_start=False)
+    act_s = actionlib.SimpleActionServer('/reaching_goal', second_assignment.msg.PlanningAction, planning, auto_start=False)
     act_s.start()
    
     # initialize going to the point

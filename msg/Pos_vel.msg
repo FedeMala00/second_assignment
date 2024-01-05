@@ -1,5 +1,4 @@
-float32 x # coord x position
-float32 y # coord y position
-
-float32 vel_x # velocity on coord x
-float32 vel_y # velocity on coord y
+float32 x # coordinate x
+float32 y # coordinate y
+float32 vel_x # vel along x
+float32 vel_z # vel along z
