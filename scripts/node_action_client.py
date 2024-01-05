@@ -48,13 +48,16 @@ def action_client():
             x = float(input("Enter desired x coordinate: "))
             y = float(input("Enter desired y coordinate: "))
             # Creates a goal to send to the action server.
+
+            rospy.set_param('/des_pos_x', x)
+            rospy.set_param('/des_pos_y', y)
             
             goal = second_assignment.msg.PlanningGoal()
 
             goal.target_pose.pose.position.x = x
             goal.target_pose.pose.position.y = y
 
-            # Sends the goal to the action server.
+            # Sends the goal to the action server
             client.send_goal(goal, feedback_cb=feedback_cb)
 
             # Used to print the change of status before the cancel_goal
