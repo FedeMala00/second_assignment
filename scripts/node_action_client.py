@@ -77,7 +77,7 @@ def action_client():
             if latest_feedback.actual_pose.position.x - 0.5 < x < latest_feedback.actual_pose.position.x + 0.5 and latest_feedback.actual_pose.position.y - 0.5 < y < latest_feedback.actual_pose.position.y + 0.5:
                 rospy.loginfo("Goal reached")
                 goal_reached = True
-                restart = input("\nPress r to restart the program or q to quit")
+                restart = input("\nPress r to restart the program or q to quit: ")
                 if restart == 'r':
                     var = True
                     goal_reached = False
