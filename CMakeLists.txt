@@ -64,7 +64,7 @@ add_message_files(
 add_service_files(
   FILES
   Dist_vel.srv
-#   Service2.srv
+  Last_target.srv  	
 )
 
 ## Generate actions in the 'action' folder

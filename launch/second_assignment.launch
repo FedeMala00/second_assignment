@@ -9,4 +9,5 @@
     <node pkg="second_assignment" type="node_action_client.py" name="action_client" launch-prefix="xterm -e" />
     <node pkg="second_assignment" type="bug_as.py" name="bug_action_service"/>
     <node pkg="second_assignment" type="subscriber_pos_vel.py" name="subscriber_pos_vel" launch-prefix="xterm -e" />
+    <node pkg="second_assignment" type="last_target_service.py" name="last_target_service" launch-prefix="xterm -e" />
 </launch>

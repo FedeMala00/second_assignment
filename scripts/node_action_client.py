@@ -61,7 +61,7 @@ def action_client():
             client.send_goal(goal, feedback_cb=feedback_cb)
 
             # Used to print the change of status before the cancel_goal
-            time.sleep(2) 
+            time.sleep(1) 
             cancel_goal = input("\nPress c if you want to cancel the goal and any other key to mantain it: ")
             if cancel_goal == 'c':
                 client.cancel_goal()
@@ -80,6 +80,7 @@ def action_client():
                 restart = input("\nPress r to restart the program or q to quit")
                 if restart == 'r':
                     var = True
+                    goal_reached = False
                 else:
                     rospy.loginfo("Program terminated")
                     break
@@ -100,7 +101,6 @@ def pub_pos_vel(message):
 
     pub.publish(pos_vel) 
     
-
 
 if __name__ == '__main__':
     try:
