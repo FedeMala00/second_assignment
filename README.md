@@ -41,7 +41,7 @@ By running the programm three different windows will open:
 ## Nodes descriptions 
 Brief description of all the implemented nodes.
 ### `node_action_client`
-This ROS node is implemented in order to act as a client to an action server. The action server provides an action of type PlanningAction using the "namespace" /reaching_goal founded by using the command `rostopic list`. 
+This node is implemented in order to act as a client to an action server. The action server provides an action of type PlanningAction using the "namespace" /reaching_goal founded by using the command `rostopic list`. 
 The client allows the user to input a desired `x` and `y` coordinate. These coordinates are then set as parameters in the ROS parameter server and sent as a goal to the action server. The goal is an instance of `PlanningGoal` and contains the target pose (position and orientation) for the robot, in which the position coordinates are set equal to the prevoius `x` and `y`.
 
 The client also subscribes to the `/odom` topic, which publish messages of type Odometry. The callback function for this subscription, `pub_pos_vel`, extracts the position and velocity information from the Odometry message and publishes it to the `/pos_vel_topic` using a custom message `Pos_vel` that can be visualized into the `msg` directory. 
@@ -62,5 +62,10 @@ rosservice call /last_target_service
 
 ### `subscriber_pos_vel`
 
+This node subscribes to a topic, provides a service, and also acts as a client to that service.
+The node subscribes to the `/pos_vel_topic` topic, which publishes messages of type `Pos_vel`. The `callback_function` for this subscription calculates the Euclidean distance between the current position (retrieved from the `Pos_vel` message) and a goal position (from ROS parameters). It also calculates the average speed of the robot over a window of recent velocities.
 
+The node provides a service at the `/dist_vel_service` topic. The service is of type `Dist_vel` and when a request is received, it responds with the most recently calculated distance and average speed.
+The node also acts as a client to the `/dist_vel_service` service. It continuously calls the service and logs the response (the distance and average speed) to the terminal. The rate of these service calls is controlled by a `Rate` object to ensure they occur at approximately 1 Hz.
+The node continues to run and call the service until it is shut down.
 
