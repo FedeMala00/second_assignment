@@ -18,7 +18,7 @@ from actionlib_msgs.msg import GoalStatus
 
 def service_callback(_):
     global x, y
-
+    # Retrieves the last target coordinates from the parameters
     x = rospy.get_param('/des_pos_x')
     y = rospy.get_param('/des_pos_y')
 
@@ -27,13 +27,15 @@ def service_callback(_):
 
 if __name__ == '__main__':
     try:
+       # Initializes the node
        rospy.init_node('last_target_node')
        rospy.loginfo("last_target_node initialized")
        rospy.loginfo("write on terminal 'rosservice call /last_target_service' to get the last target coordinates")
-     
+
+       # Creates a service used to retrieve the last target coordinates exploiting the Last_target custom service
        s = rospy.Service('last_target_service', Last_target, service_callback)
        rospy.wait_for_service('last_target_service')
-
+       # Keeps the node alive
        rospy.spin()
        
 
