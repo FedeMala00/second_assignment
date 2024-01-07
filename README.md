@@ -69,3 +69,4 @@ The node provides a service at the `/dist_vel_service` topic. The service is of 
 The node also acts as a client to the `/dist_vel_service` service. It continuously calls the service and logs the response (the distance and average speed) to the terminal. The rate of these service calls is controlled by a `Rate` object to ensure they occur at approximately 1 Hz.
 The node continues to run and call the service until it is shut down.
 
+## Flowchart of `node_action_client`
