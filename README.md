@@ -70,3 +70,8 @@ The node also acts as a client to the `/dist_vel_service` service. It continuous
 The node continues to run and call the service until it is shut down.
 
 ## Flowchart of `node_action_client`
+Flowchart containing the representation of the code, with:
+- actions represented by rectangles
+- decisions represented by rhombuses
+
+![Flowchart.drawio.png](https://github.com/FedeMala00/Research_track_ass2/blob/main/Flowchart.drawio.png)
