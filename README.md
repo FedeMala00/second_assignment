@@ -20,7 +20,7 @@ sudo apt-get install xterm
 ```
 Then it's possible to clone the repository into the `src` directory that is present in the ros environment. 
 ```bash
-git clone https://github.com/FedeMala00/Research_track_ass2.git
+git clone https://github.com/FedeMala00/second_assignment.git
 ```
 Subsequently it's necessary to add the execution permission to all the `.py` files contained into the `scripts` directory, so first of all you need to move to `scripts` directory and then use this command.
 ```bash
