@@ -4,6 +4,7 @@ from __future__ import print_function
 import sys
 import rospy
 import time
+from std_msgs.msg import Float32
 from geometry_msgs.msg import Point, Pose, Twist
 from nav_msgs.msg import Odometry
 import actionlib
@@ -14,9 +15,14 @@ from second_assignment.msg import PlanningAction, PlanningGoal, PlanningResult
 from second_assignment.srv import Last_target, Last_targetResponse
 from std_srvs.srv import SetBool
 from actionlib_msgs.msg import GoalStatus
+from sensor_msgs.msg import LaserScan
+
 
 global x
 global y 
+
+counter = 0
+print_frequency = 35
                 
 def feedback_cb(feedback):
     # Process feedback received from the action server
@@ -45,6 +51,8 @@ def action_client():
         # because of the while loop (it's blocking)
 
         rospy.Subscriber("/odom", Odometry, pub_pos_vel)
+
+        rospy.Subscriber('/scan', LaserScan, clbk_laser)
 
         if var == True:
 
@@ -112,7 +120,28 @@ def pub_pos_vel(message):
     pos_vel.vel_z = message.twist.twist.angular.z
 
     pub.publish(pos_vel) 
-    
+
+# Callback function for the laser subscriber
+def clbk_laser(msg):
+    global regions_
+    global counter
+    global print_frequency
+    global min_value
+
+    pub_min_dist = rospy.Publisher('min_dist_topic', Float32, queue_size=1)
+
+    regions_ = {
+        'right':  min(min(msg.ranges[0:143]), 10),
+        'fright': min(min(msg.ranges[144:287]), 10),
+        'front':  min(min(msg.ranges[288:431]), 10),
+        'fleft':  min(min(msg.ranges[432:575]), 10),
+        'left':   min(min(msg.ranges[576:713]), 10),
+    }    
+    counter += 1
+    min_value = min(regions_.values())
+    if counter >= print_frequency:
+        pub_min_dist.publish(min_value)
+        counter = 0
 
 if __name__ == '__main__':
     try:
