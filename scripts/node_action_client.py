@@ -11,6 +11,7 @@ import actionlib.msg
 import second_assignment.msg
 from second_assignment.msg import Pos_vel
 from second_assignment.msg import PlanningAction, PlanningGoal, PlanningResult
+from second_assignment.srv import Last_target, Last_targetResponse
 from std_srvs.srv import SetBool
 from actionlib_msgs.msg import GoalStatus
 
@@ -74,8 +75,12 @@ def action_client():
             else:
                 var = False
                
-        # Condition to check if the goal has been reached
+
+        last_target = rospy.ServiceProxy('last_target_service', Last_target)
+        print("\nLast target coordinates: ") 
+        print(last_target())
         time.sleep(2)
+        # Condition to check if the goal has been reached
         if goal_reached == False:
             # Prints the latest feedback which is the actual position and orientation of the robot
             rospy.loginfo(latest_feedback)
