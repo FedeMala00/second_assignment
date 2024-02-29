@@ -1,5 +1,18 @@
 #! /usr/bin/env python3
 
+"""
+.. module::last_target_service
+
+   :platform: Unix
+   :synopsis: module that implements a service to retrieve the last target coordinates
+   
+.. moduleauthor:: Federico Malatesta S4803603@studenti.unige.it
+
+Service:
+    /last_target_service
+
+"""
+
 import sys
 import rospy
 import time
@@ -17,6 +30,9 @@ from std_srvs.srv import SetBool
 from actionlib_msgs.msg import GoalStatus
 
 def service_callback(_):
+    """
+    Callback function used to retrieve the last target coordinates from the parameters
+    """
     global x, y
     # Retrieves the last target coordinates from the parameters
     x = rospy.get_param('/des_pos_x')
@@ -26,6 +42,10 @@ def service_callback(_):
 
 
 if __name__ == '__main__':
+    """
+    Main function used to initialize the node, create the service to retrieve the last target coordinates
+    and provide the user with the instructions to recall the service
+    """
     try:
        # Initializes the node
        rospy.init_node('last_target_node')

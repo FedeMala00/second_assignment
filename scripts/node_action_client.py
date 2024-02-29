@@ -1,5 +1,26 @@
 #! /usr/bin/env python3
 
+
+"""
+.. module::node_action_client
+
+   :platform: Unix
+   :synopsis: module that implements an action client to send a goal to the action server and cancel it if needed, furthermore
+   this node publishes the position and velocity of the robot to the topic /pos_vel_topic using a custom message type Pos_vel
+   
+.. moduleauthor:: Federico Malatesta S4803603@studenti.unige.it
+
+Subscribes to topic: 
+    /odom
+
+Publishes to topic:
+    /pos_vel_topic
+
+Client of the action server:
+    /reaching_goal
+
+"""
+
 from __future__ import print_function
 import sys
 import rospy
@@ -16,8 +37,17 @@ from actionlib_msgs.msg import GoalStatus
 
 global x
 global y 
+"""
+Variables used to store the desired position of the robot
+"""
                 
 def feedback_cb(feedback):
+    """
+    Callback function used to store the feedback received from the action server
+    
+    args:
+        feedback: feedback received from the action server which contains msg type actual_pose
+    """
     # Process feedback received from the action server
     global latest_feedback
     # Store the latest feedback
@@ -25,6 +55,11 @@ def feedback_cb(feedback):
 
 
 def action_client():
+    """
+    Function used to create the action client and send the goal to the action server, furthermore it checks if the goal has been reached
+    using the feedback received from the action server and it allows the user to cancel the goal if needed. 
+    Then once the goal has been reached it asks the user if he wants to restart the program or quit it.    
+    """
     global x
     global y 
     # Creates the SimpleActionClient, passing the type of the action
@@ -93,7 +128,13 @@ def action_client():
 
 
 def pub_pos_vel(message):
-
+    
+    """
+    Callback function used to publish the position and velocity of the robot to the topic /pos_vel_topic using a custom message type Pos_vel
+    
+    args:
+        message: message received from the topic /odom type Odometry
+    """
     # Creates a publisher to the topic /pos_vel_topic which uses the custom message type Pos_vel
     pub = rospy.Publisher('pos_vel_topic', Pos_vel, queue_size=1)
 
@@ -110,6 +151,9 @@ def pub_pos_vel(message):
     
 
 if __name__ == '__main__':
+    """
+    Main function used to initialize the node and call the action_client function
+    """
     try:
         # Initializes a rospy node so that the SimpleActionClient can
         # publish and subscribe over ROS.

@@ -1,5 +1,22 @@
 #! /usr/bin/env python3
 
+"""
+.. module::subscriber_pos_vel
+
+    :platform: Unix
+    :synopsis: module that implements a subscriber to the topic /pos_vel_topic and a service to retrieve the distance of the robot from the target and the average speed
+    
+.. moduleauthor:: Federico Malatesta S4803603@studenti.unige.it
+
+Subscribes to topic:
+    /pos_vel_topic
+    
+Service:
+    /dist_vel_service
+
+"""
+    
+
 import sys
 import rospy
 import time
@@ -19,7 +36,19 @@ global distance, average_speed
 distance = 0.0
 average_speed = 0.0
 
+"""
+variables used to store the distance and the average speed
+"""
+
 def callback_function(pos_vel):
+    
+    """
+    Callback function used to store the position and velocity of the robot and calculate the distance from the goal and the average speed
+    
+    args:
+        pos_vel: message received from the topic /pos_vel_topic which contains msg type Pos_vel
+    """
+    
     global distance, average_speed
 
     # create a list of velocities and assign the window size to a variable
@@ -48,6 +77,10 @@ def callback_function(pos_vel):
     # rospy.loginfo(f"average_speed: {average_speed}")
 
 def service_callback(_):
+    
+    """
+    Callback function used to retrieve the distance and the average speed
+    """
     global distance, average_speed
 
     # rospy.loginfo(f"distance: {distance} average_speed: {average_speed}")

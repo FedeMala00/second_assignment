@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to second_assignment’s documentation! &mdash; second_assignment 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            second_assignment
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to second_assignment’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a><ul>
+<li><a class="reference internal" href="#second-assignment-documentation">second_assignment documentation!</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scripts.node_action_client">second_assignment Module</a><ul>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus"><code class="docutils literal notranslate"><span class="pre">GoalStatus</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.ABORTED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.ABORTED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.ACTIVE"><code class="docutils literal notranslate"><span class="pre">GoalStatus.ACTIVE</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.LOST"><code class="docutils literal notranslate"><span class="pre">GoalStatus.LOST</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.PENDING"><code class="docutils literal notranslate"><span class="pre">GoalStatus.PENDING</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.PREEMPTED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.PREEMPTED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.PREEMPTING"><code class="docutils literal notranslate"><span class="pre">GoalStatus.PREEMPTING</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.RECALLED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.RECALLED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.RECALLING"><code class="docutils literal notranslate"><span class="pre">GoalStatus.RECALLING</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.REJECTED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.REJECTED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.SUCCEEDED"><code class="docutils literal notranslate"><span class="pre">GoalStatus.SUCCEEDED</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.deserialize"><code class="docutils literal notranslate"><span class="pre">GoalStatus.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">GoalStatus.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.goal_id"><code class="docutils literal notranslate"><span class="pre">GoalStatus.goal_id</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.serialize"><code class="docutils literal notranslate"><span class="pre">GoalStatus.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">GoalStatus.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.status"><code class="docutils literal notranslate"><span class="pre">GoalStatus.status</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.text"><code class="docutils literal notranslate"><span class="pre">GoalStatus.text</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.GoalStatus.to_string"><code class="docutils literal notranslate"><span class="pre">GoalStatus.to_string()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.node_action_client.Odometry"><code class="docutils literal notranslate"><span class="pre">Odometry</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.node_action_client.Odometry.child_frame_id"><code class="docutils literal notranslate"><span class="pre">Odometry.child_frame_id</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Odometry.deserialize"><code class="docutils literal notranslate"><span class="pre">Odometry.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Odometry.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">Odometry.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Odometry.header"><code class="docutils literal notranslate"><span class="pre">Odometry.header</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Odometry.pose"><code class="docutils literal notranslate"><span class="pre">Odometry.pose</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Odometry.serialize"><code class="docutils literal notranslate"><span class="pre">Odometry.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Odometry.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">Odometry.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Odometry.twist"><code class="docutils literal notranslate"><span class="pre">Odometry.twist</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningAction"><code class="docutils literal notranslate"><span class="pre">PlanningAction</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningAction.action_feedback"><code class="docutils literal notranslate"><span class="pre">PlanningAction.action_feedback</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningAction.action_goal"><code class="docutils literal notranslate"><span class="pre">PlanningAction.action_goal</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningAction.action_result"><code class="docutils literal notranslate"><span class="pre">PlanningAction.action_result</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningAction.deserialize"><code class="docutils literal notranslate"><span class="pre">PlanningAction.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningAction.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">PlanningAction.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningAction.serialize"><code class="docutils literal notranslate"><span class="pre">PlanningAction.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningAction.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">PlanningAction.serialize_numpy()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningGoal"><code class="docutils literal notranslate"><span class="pre">PlanningGoal</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningGoal.deserialize"><code class="docutils literal notranslate"><span class="pre">PlanningGoal.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningGoal.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">PlanningGoal.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningGoal.serialize"><code class="docutils literal notranslate"><span class="pre">PlanningGoal.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningGoal.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">PlanningGoal.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningGoal.target_pose"><code class="docutils literal notranslate"><span class="pre">PlanningGoal.target_pose</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningResult"><code class="docutils literal notranslate"><span class="pre">PlanningResult</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningResult.deserialize"><code class="docutils literal notranslate"><span class="pre">PlanningResult.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningResult.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">PlanningResult.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningResult.serialize"><code class="docutils literal notranslate"><span class="pre">PlanningResult.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.PlanningResult.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">PlanningResult.serialize_numpy()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.node_action_client.Point"><code class="docutils literal notranslate"><span class="pre">Point</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.node_action_client.Point.deserialize"><code class="docutils literal notranslate"><span class="pre">Point.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Point.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">Point.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Point.serialize"><code class="docutils literal notranslate"><span class="pre">Point.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Point.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">Point.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Point.x"><code class="docutils literal notranslate"><span class="pre">Point.x</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Point.y"><code class="docutils literal notranslate"><span class="pre">Point.y</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Point.z"><code class="docutils literal notranslate"><span class="pre">Point.z</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pos_vel"><code class="docutils literal notranslate"><span class="pre">Pos_vel</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.node_action_client.Pos_vel.deserialize"><code class="docutils literal notranslate"><span class="pre">Pos_vel.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pos_vel.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">Pos_vel.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pos_vel.serialize"><code class="docutils literal notranslate"><span class="pre">Pos_vel.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pos_vel.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">Pos_vel.serialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pos_vel.vel_x"><code class="docutils literal notranslate"><span class="pre">Pos_vel.vel_x</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pos_vel.vel_z"><code class="docutils literal notranslate"><span class="pre">Pos_vel.vel_z</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pos_vel.x"><code class="docutils literal notranslate"><span class="pre">Pos_vel.x</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pos_vel.y"><code class="docutils literal notranslate"><span class="pre">Pos_vel.y</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pose"><code class="docutils literal notranslate"><span class="pre">Pose</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.node_action_client.Pose.deserialize"><code class="docutils literal notranslate"><span class="pre">Pose.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pose.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">Pose.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pose.orientation"><code class="docutils literal notranslate"><span class="pre">Pose.orientation</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pose.position"><code class="docutils literal notranslate"><span class="pre">Pose.position</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pose.serialize"><code class="docutils literal notranslate"><span class="pre">Pose.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Pose.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">Pose.serialize_numpy()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.node_action_client.SetBool"><code class="docutils literal notranslate"><span class="pre">SetBool</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Twist"><code class="docutils literal notranslate"><span class="pre">Twist</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.node_action_client.Twist.angular"><code class="docutils literal notranslate"><span class="pre">Twist.angular</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Twist.deserialize"><code class="docutils literal notranslate"><span class="pre">Twist.deserialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Twist.deserialize_numpy"><code class="docutils literal notranslate"><span class="pre">Twist.deserialize_numpy()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Twist.linear"><code class="docutils literal notranslate"><span class="pre">Twist.linear</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Twist.serialize"><code class="docutils literal notranslate"><span class="pre">Twist.serialize()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.Twist.serialize_numpy"><code class="docutils literal notranslate"><span class="pre">Twist.serialize_numpy()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.node_action_client.action_client"><code class="docutils literal notranslate"><span class="pre">action_client()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.feedback_cb"><code class="docutils literal notranslate"><span class="pre">feedback_cb()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.node_action_client.pub_pos_vel"><code class="docutils literal notranslate"><span class="pre">pub_pos_vel()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">second_assignment</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to second_assignment’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-second-assignment-s-documentation">
+<h1>Welcome to second_assignment’s documentation!<a class="headerlink" href="#welcome-to-second-assignment-s-documentation" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+<section id="second-assignment-documentation">
+<h2>second_assignment documentation!<a class="headerlink" href="#second-assignment-documentation" title="Link to this heading"></a></h2>
+<p>This is the documentation of the second_assignment package!</p>
+</section>
+</section>
+<section id="module-scripts.node_action_client">
+<span id="second-assignment-module"></span><h1>second_assignment Module<a class="headerlink" href="#module-scripts.node_action_client" title="Link to this heading"></a></h1>
+<p><em>Module author: Federico Malatesta <a class="reference external" href="mailto:S4803603&#37;&#52;&#48;studenti&#46;unige&#46;it">S4803603<span>&#64;</span>studenti<span>&#46;</span>unige<span>&#46;</span>it</a></em></p>
+<dl class="simple">
+<dt>Subscribes to topic:</dt><dd><p>/odom</p>
+</dd>
+<dt>Publishes to topic:</dt><dd><p>/pos_vel_topic</p>
+</dd>
+<dt>Client of the action server:</dt><dd><p>/reaching_goal</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">GoalStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.GoalStatus" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.ABORTED">
+<span class="sig-name descname"><span class="pre">ABORTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#scripts.node_action_client.GoalStatus.ABORTED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.ACTIVE">
+<span class="sig-name descname"><span class="pre">ACTIVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#scripts.node_action_client.GoalStatus.ACTIVE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.LOST">
+<span class="sig-name descname"><span class="pre">LOST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#scripts.node_action_client.GoalStatus.LOST" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.PENDING">
+<span class="sig-name descname"><span class="pre">PENDING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#scripts.node_action_client.GoalStatus.PENDING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.PREEMPTED">
+<span class="sig-name descname"><span class="pre">PREEMPTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#scripts.node_action_client.GoalStatus.PREEMPTED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.PREEMPTING">
+<span class="sig-name descname"><span class="pre">PREEMPTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#scripts.node_action_client.GoalStatus.PREEMPTING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.RECALLED">
+<span class="sig-name descname"><span class="pre">RECALLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#scripts.node_action_client.GoalStatus.RECALLED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.RECALLING">
+<span class="sig-name descname"><span class="pre">RECALLING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#scripts.node_action_client.GoalStatus.RECALLING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.REJECTED">
+<span class="sig-name descname"><span class="pre">REJECTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#scripts.node_action_client.GoalStatus.REJECTED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.SUCCEEDED">
+<span class="sig-name descname"><span class="pre">SUCCEEDED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#scripts.node_action_client.GoalStatus.SUCCEEDED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.deserialize">
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.GoalStatus.deserialize" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.deserialize_numpy">
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.GoalStatus.deserialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.goal_id">
+<span class="sig-name descname"><span class="pre">goal_id</span></span><a class="headerlink" href="#scripts.node_action_client.GoalStatus.goal_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.serialize">
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.GoalStatus.serialize" title="Link to this definition"></a></dt>
+<dd><p>serialize message into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.serialize_numpy">
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/actionlib_msgs/msg/_GoalStatus.html#GoalStatus.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.GoalStatus.serialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>serialize message with numpy array types into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.status">
+<span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#scripts.node_action_client.GoalStatus.status" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.text">
+<span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#scripts.node_action_client.GoalStatus.text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.GoalStatus.to_string">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scripts.node_action_client.GoalStatus.to_string" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.node_action_client.Odometry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">Odometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Odometry" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Odometry.child_frame_id">
+<span class="sig-name descname"><span class="pre">child_frame_id</span></span><a class="headerlink" href="#scripts.node_action_client.Odometry.child_frame_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Odometry.deserialize">
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Odometry.deserialize" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Odometry.deserialize_numpy">
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Odometry.deserialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Odometry.header">
+<span class="sig-name descname"><span class="pre">header</span></span><a class="headerlink" href="#scripts.node_action_client.Odometry.header" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Odometry.pose">
+<span class="sig-name descname"><span class="pre">pose</span></span><a class="headerlink" href="#scripts.node_action_client.Odometry.pose" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Odometry.serialize">
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Odometry.serialize" title="Link to this definition"></a></dt>
+<dd><p>serialize message into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Odometry.serialize_numpy">
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nav_msgs/msg/_Odometry.html#Odometry.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Odometry.serialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>serialize message with numpy array types into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Odometry.twist">
+<span class="sig-name descname"><span class="pre">twist</span></span><a class="headerlink" href="#scripts.node_action_client.Odometry.twist" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningAction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">PlanningAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningAction.html#PlanningAction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningAction" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningAction.action_feedback">
+<span class="sig-name descname"><span class="pre">action_feedback</span></span><a class="headerlink" href="#scripts.node_action_client.PlanningAction.action_feedback" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningAction.action_goal">
+<span class="sig-name descname"><span class="pre">action_goal</span></span><a class="headerlink" href="#scripts.node_action_client.PlanningAction.action_goal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningAction.action_result">
+<span class="sig-name descname"><span class="pre">action_result</span></span><a class="headerlink" href="#scripts.node_action_client.PlanningAction.action_result" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningAction.deserialize">
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningAction.html#PlanningAction.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningAction.deserialize" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningAction.deserialize_numpy">
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningAction.html#PlanningAction.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningAction.deserialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningAction.serialize">
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningAction.html#PlanningAction.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningAction.serialize" title="Link to this definition"></a></dt>
+<dd><p>serialize message into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningAction.serialize_numpy">
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningAction.html#PlanningAction.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningAction.serialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>serialize message with numpy array types into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningGoal">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">PlanningGoal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningGoal.html#PlanningGoal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningGoal" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningGoal.deserialize">
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningGoal.html#PlanningGoal.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningGoal.deserialize" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningGoal.deserialize_numpy">
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningGoal.html#PlanningGoal.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningGoal.deserialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningGoal.serialize">
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningGoal.html#PlanningGoal.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningGoal.serialize" title="Link to this definition"></a></dt>
+<dd><p>serialize message into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningGoal.serialize_numpy">
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningGoal.html#PlanningGoal.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningGoal.serialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>serialize message with numpy array types into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningGoal.target_pose">
+<span class="sig-name descname"><span class="pre">target_pose</span></span><a class="headerlink" href="#scripts.node_action_client.PlanningGoal.target_pose" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">PlanningResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningResult.html#PlanningResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningResult" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningResult.deserialize">
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningResult.html#PlanningResult.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningResult.deserialize" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningResult.deserialize_numpy">
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningResult.html#PlanningResult.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningResult.deserialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningResult.serialize">
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningResult.html#PlanningResult.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningResult.serialize" title="Link to this definition"></a></dt>
+<dd><p>serialize message into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.PlanningResult.serialize_numpy">
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_PlanningResult.html#PlanningResult.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.PlanningResult.serialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>serialize message with numpy array types into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.node_action_client.Point">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">Point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Point.html#Point"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Point" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Point.deserialize">
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Point.html#Point.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Point.deserialize" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Point.deserialize_numpy">
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Point.html#Point.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Point.deserialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Point.serialize">
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Point.html#Point.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Point.serialize" title="Link to this definition"></a></dt>
+<dd><p>serialize message into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Point.serialize_numpy">
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Point.html#Point.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Point.serialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>serialize message with numpy array types into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Point.x">
+<span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#scripts.node_action_client.Point.x" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Point.y">
+<span class="sig-name descname"><span class="pre">y</span></span><a class="headerlink" href="#scripts.node_action_client.Point.y" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Point.z">
+<span class="sig-name descname"><span class="pre">z</span></span><a class="headerlink" href="#scripts.node_action_client.Point.z" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pos_vel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">Pos_vel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_Pos_vel.html#Pos_vel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Pos_vel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pos_vel.deserialize">
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_Pos_vel.html#Pos_vel.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Pos_vel.deserialize" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pos_vel.deserialize_numpy">
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_Pos_vel.html#Pos_vel.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Pos_vel.deserialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pos_vel.serialize">
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_Pos_vel.html#Pos_vel.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Pos_vel.serialize" title="Link to this definition"></a></dt>
+<dd><p>serialize message into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pos_vel.serialize_numpy">
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/second_assignment/msg/_Pos_vel.html#Pos_vel.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Pos_vel.serialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>serialize message with numpy array types into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pos_vel.vel_x">
+<span class="sig-name descname"><span class="pre">vel_x</span></span><a class="headerlink" href="#scripts.node_action_client.Pos_vel.vel_x" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pos_vel.vel_z">
+<span class="sig-name descname"><span class="pre">vel_z</span></span><a class="headerlink" href="#scripts.node_action_client.Pos_vel.vel_z" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pos_vel.x">
+<span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#scripts.node_action_client.Pos_vel.x" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pos_vel.y">
+<span class="sig-name descname"><span class="pre">y</span></span><a class="headerlink" href="#scripts.node_action_client.Pos_vel.y" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pose">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">Pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Pose.html#Pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Pose" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pose.deserialize">
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Pose.html#Pose.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Pose.deserialize" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pose.deserialize_numpy">
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Pose.html#Pose.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Pose.deserialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pose.orientation">
+<span class="sig-name descname"><span class="pre">orientation</span></span><a class="headerlink" href="#scripts.node_action_client.Pose.orientation" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pose.position">
+<span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#scripts.node_action_client.Pose.position" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pose.serialize">
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Pose.html#Pose.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Pose.serialize" title="Link to this definition"></a></dt>
+<dd><p>serialize message into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Pose.serialize_numpy">
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Pose.html#Pose.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Pose.serialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>serialize message with numpy array types into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.node_action_client.SetBool">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">SetBool</span></span><a class="reference internal" href="_modules/std_srvs/srv/_SetBool.html#SetBool"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.SetBool" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.node_action_client.Twist">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">Twist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Twist.html#Twist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Twist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Twist.angular">
+<span class="sig-name descname"><span class="pre">angular</span></span><a class="headerlink" href="#scripts.node_action_client.Twist.angular" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Twist.deserialize">
+<span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Twist.html#Twist.deserialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Twist.deserialize" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Twist.deserialize_numpy">
+<span class="sig-name descname"><span class="pre">deserialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Twist.html#Twist.deserialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Twist.deserialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>unpack serialized message in str into this message instance using numpy for array types
+:param str: byte array of serialized message, <code class="docutils literal notranslate"><span class="pre">str</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scripts.node_action_client.Twist.linear">
+<span class="sig-name descname"><span class="pre">linear</span></span><a class="headerlink" href="#scripts.node_action_client.Twist.linear" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Twist.serialize">
+<span class="sig-name descname"><span class="pre">serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Twist.html#Twist.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Twist.serialize" title="Link to this definition"></a></dt>
+<dd><p>serialize message into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.node_action_client.Twist.serialize_numpy">
+<span class="sig-name descname"><span class="pre">serialize_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numpy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometry_msgs/msg/_Twist.html#Twist.serialize_numpy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.Twist.serialize_numpy" title="Link to this definition"></a></dt>
+<dd><p>serialize message with numpy array types into buffer
+:param buff: buffer, <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>
+:param numpy: numpy python module</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.node_action_client.action_client">
+<span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">action_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/node_action_client.html#action_client"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.action_client" title="Link to this definition"></a></dt>
+<dd><p>Function used to create the action client and send the goal to the action server, furthermore it checks if the goal has been reached
+using the feedback received from the action server and it allows the user to cancel the goal if needed.
+Then once the goal has been reached it asks the user if he wants to restart the program or quit it.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.node_action_client.feedback_cb">
+<span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">feedback_cb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feedback</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/node_action_client.html#feedback_cb"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.feedback_cb" title="Link to this definition"></a></dt>
+<dd><p>Callback function used to store the feedback received from the action server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>feedback</strong> – feedback received from the action server which contains msg type actual_pose</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.node_action_client.pub_pos_vel">
+<span class="sig-prename descclassname"><span class="pre">scripts.node_action_client.</span></span><span class="sig-name descname"><span class="pre">pub_pos_vel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/node_action_client.html#pub_pos_vel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.node_action_client.pub_pos_vel" title="Link to this definition"></a></dt>
+<dd><p>Callback function used to publish the position and velocity of the robot to the topic /pos_vel_topic using a custom message type Pos_vel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> – message received from the topic /odom type Odometry</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Federico Malatesta.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
